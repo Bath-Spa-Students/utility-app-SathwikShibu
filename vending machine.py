@@ -34,7 +34,7 @@ print('''
 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉𝒆 𝑽𝒆𝒏𝒅𝒊𝒏𝒈 𝑴𝒂𝒄𝒉𝒊𝒏𝒆❗''')
 print("Please select an item:")
 for key, item in items.items():
-    print(f"{key}. {item['name']} - ${item['price']}")
+    print(f"{key}. {item['name']} - dhs{item['price']}")
 
 # Prompt user for input
 selection = input("Enter the item number you wish to purchase: ")
@@ -48,10 +48,10 @@ if selection in items:
     # Prompt user to insert money
     while amount_due > 0:
         try:
-            payment = float(input(f"Please insert ${amount_due:.2f}: "))
+            payment = float(input(f"Please insert dhs{amount_due:.2f}: "))
             if payment >= amount_due:
                 change = payment - amount_due
-                print(f"Thank you for your purchase! Your change is ${change:.2f}.")
+                print(f"Thank you for your purchase! Your change is dhs{change:.2f}.")
                 break
             else:
                 print("Insufficient payment. Please insert more money.")
